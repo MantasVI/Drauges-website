@@ -301,7 +301,6 @@ font-size:  var(--font-size-l);
 
 }
 
-@media screen and (max-width: 900px) {
 @media screen and (max-width: 600px) {
   :root{
   --font-size-m:1rem;
