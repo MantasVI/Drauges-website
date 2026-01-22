@@ -43,10 +43,6 @@ html{
 scroll-behavior: smooth;
 
 }
-#menu-open-button,
-#menu-close-button {
-  display: none;
-}
 /* styling for the whole website*/
 ul {
 list-style: none;
@@ -306,6 +302,7 @@ font-size:  var(--font-size-l);
 }
 
 @media screen and (max-width: 900px) {
+@media screen and (max-width: 600px) {
   :root{
   --font-size-m:1rem;
   --font-size-l:1.3rem;
