@@ -8,14 +8,68 @@
   font-family: "Borel";
 }
 
+.left,
+.right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  gap: 20px;
+  min-width: 160px;
+  font-size: 20px;
+}
+
+.oneline {
+  display: flex;
+  margin-bottom: 50px;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.ops {
+  display: inline-block;
+}
+
+select {
+  outline: none;
+  width: 100px;
+  height: 75px;
+  font-size: 30px;
+  background-color: var(--blue);
+}
+
+
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Right-container {
+  display: inline-block;
+  justify-content: space-between;
+  margin-left: 10px;
+}
+
+.Left-container {
+  display: inline-block;
+  justify-content: space-between;
+  margin-right: 10px;
+}
+
 :root {
   /* colors */
   --white-color: #fff;
   --dark-color: #252525;
   --primary-color: #ffc375;
-  --secondary-color: #a103fc;
+  --secondary-color: #ff9d00;
   --light-pink-color: #faf4f9;
   --medium-gray-color: #ccc;
+  --cute-color: rgb(239, 209, 229);
   --blue: rgb(10, 210, 255);
   --yellow: rgb(242, 223, 99);
   /* font sizes */
@@ -75,6 +129,29 @@ img {
   text-transform: uppercase;
   font-size: var(--font-size-xl);
 }
+
+.btnAll,
+.btnCustom {
+  padding: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+  font-size: 20px;
+  margin-top: 20px;
+  background-color: var(--secondary-color);
+  border: 2px solid var(--white-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  color: var(--white-color);
+  border-radius: 8px;
+}
+
+.btnAll:hover,
+.btnCustom:hover {
+  transition: 0.2s;
+  color: var(--blue);
+  background-color: var(--yellow);
+  border-color: var(--blue);
+}
+
 
 .section-title::after {
   content: "";
@@ -166,7 +243,7 @@ header .navbar {
 }
 
 .hero-section .hero-details .button {
-  padding: 10px 26px;
+  padding: 15px 26px;
   border: 2px solid transparent;
   color: var(--primary-color);
   border-radius: var(--border-radius-m);
@@ -205,12 +282,19 @@ header .navbar {
   background: var(--light-pink-color);
 }
 
+.presson-section {
+  padding: 240px 0;
+  background: var(--cute-color);
+
+}
+
 .about-section .section-content {
   display: flex;
   gap: 50px;
   align-items: center;
   justify-content: space-between;
 }
+
 
 .about-section .about-image-wrapper .about-image {
   width: 400px;
@@ -250,19 +334,58 @@ header .navbar {
   color: var(--blue);
 }
 
+.allSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
 /*presson section*/
 .presson-text {
+  max-width: 600px;
+  text-align: center;
+  margin: 0 auto 20px auto;
+  font-size: 30px;
+  margin-bottom: 60px;
+}
+
+.presson-text-1 {
   display: flex;
   justify-content: center;
-  margin-bottom: 50px;
+  align-items: center;
+  font-size: 20px;
+  margin-bottom: 20px;
 
 }
 
+.presson-section-title {
+  text-align: center;
+  padding: 30px 0px 0px 0px;
+  text-transform: uppercase;
+  font-size: var(--font-size-xl);
+  margin-bottom: 20px;
+}
+
+
 .presson-c {
   display: flex;
-  gap: 30px;
-  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
 
+  background-color: white;
+  /* or whatever color you want */
+  width: 600px;
+  /* give it a fixed comfortable width */
+  margin: 0 auto;
+  /* center it on the page */
+  padding: 40px;
+  /* breathing room inside */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  background-color: var(--primary-color);
 }
 
 .cont1 {

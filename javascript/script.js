@@ -11,6 +11,18 @@ menuCloseButton.addEventListener("click", () => menuOpenButton.click());
 
 // close menu when the nav button is clicked
 NavLinks.forEach(link => {
-    link.addEventListener("click",() => menuOpenButton.click());
+    link.addEventListener("click", () => menuOpenButton.click());
 
 });
+
+function switchMode(mode) {
+
+    if (mode) {
+        document.getElementById('allSection').style.display = 'none';
+        document.getElementById('customSection').style.display = 'flex';
+        document.getElementById('btnAll').classList.add('active');
+        document.getElementById('btnCustom').classList.remove('active');
+
+    }
+
+}
