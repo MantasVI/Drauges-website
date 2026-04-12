@@ -26,3 +26,63 @@ function switchMode(mode) {
     }
 
 }
+function Checkas() {
+    const x = document.getElementsByClassName('left');
+    const y = document.getElementsByClassName('right');
+    const msg = document.getElementById('error');
+    const insta = document.getElementById('insta-input').value;
+    let message = '';
+    const fingers = ['Thumb', 'Index', 'Middle', 'Ring', 'Pinky'];
+
+    msg.style.visibility = 'hidden';
+    msg.innerHTML = '';
+
+    if (insta === '' || insta.charAt(0) != '@') {
+        msg.style.visibility = 'visible';
+        msg.style.color = 'red';
+        return msg.innerHTML = 'not valid name or no @ symbol';
+    }
+
+    for (let i = 1; i < x.length; i++) {
+        let left = x[i].getElementsByTagName('select')[0];
+
+        if (left.value === "") {
+            msg.style.visibility = 'visible';
+            msg.style.color = 'red';
+            return msg.innerHTML = 'not all fields filled';
+        }
+        message += 'Left ' + fingers[i - 1] + ': ' + left.value + 'mm |';
+    }
+
+    message += ' --- '; // separator between hands
+
+    // second loop - all right hand
+    for (let i = 1; i < y.length; i++) {
+        let right = y[i].getElementsByTagName('select')[0];
+        if (right.value === "") {
+            msg.style.visibility = 'visible';
+            msg.style.color = 'red';
+            return msg.innerHTML = 'not all fields filled';
+        }
+        message += 'Right ' + fingers[i - 1] + ': ' + right.value + 'mm |';
+    }
+
+
+    let params = {
+        name: document.getElementById('insta-input').value,
+        message: message
+
+    }
+
+    msg.style.visibility = 'visible';
+    msg.style.color = 'Green';
+
+    emailjs.send('service_i50ihym', 'template_exagil5', params).then(msg.innerHTML = 'Thank you! Your order is sent I will soon message you on instagram <3');
+
+}
+
+
+
+
+
+

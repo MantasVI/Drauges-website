@@ -7,7 +7,16 @@
     <link rel="stylesheet" href="css/style.css">
 
     <script src="https://kit.fontawesome.com/3331f16d4b.js" crossorigin="anonymous"></script>
-    <title>Document</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "AWE-a7XtXfwelxQ1h",
+            });
+        })();
+    </script>
+    <title>NailsByKyu</title>
 </head>
 
 <body>
@@ -117,7 +126,7 @@
             <div class="presson-c">
                 <div class="presson-section-title">Nail Size Selection</div>
                 <div class="presson-text">Enter your instagram @
-                    <input placeholder="" style="width:400px">
+                    <input id='insta-input' placeholder="" style="width:400px; height:50px; outline:none;">
                 </div>
                 <div class="presson-text">Choose your nail length in mm</div>
 
@@ -131,7 +140,7 @@
 
                             <div class="left">Thumb
                                 <select>
-                                    <option disabled selected> -- </option>
+                                    <option value="" disabled selected> -- </option>
                                     <option>14</option>
                                     <option>15</option>
                                     <option>16</option>
@@ -140,7 +149,7 @@
                             </div>
                             <div class="left">Index
                                 <select>
-                                    <option disabled selected> -- </option>
+                                    <option value="" disabled selected> -- </option>
                                     <option>14</option>
                                     <option>15</option>
                                     <option>16</option>
@@ -149,7 +158,7 @@
                             </div>
                             <div class="left">Middle
                                 <select>
-                                    <option disabled selected> -- </option>
+                                    <option value="" disabled selected> -- </option>
                                     <option>14</option>
                                     <option>15</option>
                                     <option>16</option>
@@ -158,7 +167,7 @@
                             </div>
                             <div class="left">Ring
                                 <select>
-                                    <option disabled selected> -- </option>
+                                    <option value="" disabled selected> -- </option>
                                     <option>14</option>
                                     <option>15</option>
                                     <option>16</option>
@@ -167,7 +176,7 @@
                             </div>
                             <div class="left">Pinky
                                 <select>
-                                    <option disabled selected> -- </option>
+                                    <option value="" disabled selected> -- </option>
                                     <option>14</option>
                                     <option>15</option>
                                     <option>16</option>
@@ -184,7 +193,7 @@
 
                             <div class="right">Thumb
                                 <select>
-                                    <option disabled selected> -- </option>
+                                    <option value="" disabled selected> -- </option>
                                     <option>14</option>
                                     <option>15</option>
                                     <option>16</option>
@@ -193,7 +202,7 @@
                             </div>
                             <div class="right">Index
                                 <select>
-                                    <option disabled selected> -- </option>
+                                    <option value="" disabled selected> -- </option>
                                     <option>14</option>
                                     <option>15</option>
                                     <option>16</option>
@@ -202,7 +211,7 @@
                             </div>
                             <div class="right">Middle
                                 <select>
-                                    <option disabled selected> -- </option>
+                                    <option value="" disabled selected> -- </option>
                                     <option>14</option>
                                     <option>15</option>
                                     <option>16</option>
@@ -211,7 +220,7 @@
                             </div>
                             <div class="right">Ring
                                 <select>
-                                    <option disabled selected> -- </option>
+                                    <option value="" disabled selected> -- </option>
                                     <option>14</option>
                                     <option>15</option>
                                     <option>16</option>
@@ -220,7 +229,7 @@
                             </div>
                             <div class="right">Pinky
                                 <select>
-                                    <option disabled selected> -- </option>
+                                    <option value="" disabled selected> -- </option>
                                     <option>14</option>
                                     <option>15</option>
                                     <option>16</option>
@@ -231,7 +240,11 @@
                         </div>
                     </div>
                     <div>
-                        <button class="btnCustom">Send Selection</button>
+                        <p id="error" style="visibility:hidden;"></p>
+                    </div>
+                    <div>
+
+                        <button class="btnCustom" onclick="Checkas()">Send Selection</button>
                     </div>
 
                 </div>

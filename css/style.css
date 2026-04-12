@@ -130,6 +130,15 @@ img {
   font-size: var(--font-size-xl);
 }
 
+
+
+#error {
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .btnAll,
 .btnCustom {
   padding: 10px;
@@ -360,6 +369,10 @@ header .navbar {
   margin-bottom: 20px;
 
 }
+
+
+
+
 
 .presson-section-title {
   text-align: center;
