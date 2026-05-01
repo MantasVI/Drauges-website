@@ -1,3 +1,4 @@
+//functionality for phone
 const NavLinks = document.querySelectorAll(".nav-menu .nav-link");
 const menuOpenButton = document.querySelector("#menu-open-button");
 const menuCloseButton = document.querySelector("#menu-close-button");
@@ -11,6 +12,7 @@ menuCloseButton.addEventListener("click", () => menuOpenButton.click());
 NavLinks.forEach(link => {
     link.addEventListener("click", () => menuOpenButton.click());
 });
+//file name printer
 document.getElementById('inspo-image').addEventListener('change', function() {
     const fileName = this.files[0] ? this.files[0].name : 'No file chosen';
     document.getElementById('file-name').textContent = fileName;
@@ -18,6 +20,7 @@ document.getElementById('inspo-image').addEventListener('change', function() {
 
 const CLOUD_NAME = "do5fdm2zo";       // 👈 replace
 const UPLOAD_PRESET = "ImageBotas"; // 👈 replace
+
 
 async function Checkas(e) {
     e.preventDefault();
@@ -73,12 +76,13 @@ async function Checkas(e) {
             });
             const data = await res.json();
               
-            console.log(data); // 👈 add this
+    
+            
             // put the image URL into the hidden field
             document.getElementById('image-url').value = data.secure_url;
         } catch (err) {
               
-            console.log(err); // 👈 add this
+         
             msg.style.color = 'red';
             msg.innerHTML = 'Image upload failed, try again.';
             return;
