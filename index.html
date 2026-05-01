@@ -136,7 +136,7 @@
 
                             <div class="left">Thumb
                                 <select name="left_thumb">
-                                    <option value="" disabled selected> -- </option>
+                                    <option value="" disabled selected>  </option>
                                     <option>14</option>
                                     <option>15</option>
                                     <option>16</option>
@@ -145,7 +145,7 @@
                             </div>
                             <div class="left">Index
                                 <select name="left_index">
-                                    <option value="" disabled selected> -- </option>
+                                    <option value="" disabled selected>  </option>
                                     <option>14</option>
                                     <option>15</option>
                                     <option>16</option>
@@ -154,7 +154,7 @@
                             </div>
                             <div class="left">Middle
                                 <select name="left_middle">
-                                    <option value="" disabled selected> -- </option>
+                                    <option value="" disabled selected>  </option>
                                     <option>14</option>
                                     <option>15</option>
                                     <option>16</option>
@@ -163,7 +163,7 @@
                             </div>
                             <div class="left">Ring
                                 <select name="left_ring">
-                                    <option value="" disabled selected> -- </option>
+                                    <option value="" disabled selected>  </option>
                                     <option>14</option>
                                     <option>15</option>
                                     <option>16</option>
@@ -172,7 +172,7 @@
                             </div>
                             <div class="left">Pinky
                                 <select name="left_pinky">
-                                    <option value="" disabled selected> -- </option>
+                                    <option value="" disabled selected>  </option>
                                     <option>14</option>
                                     <option>15</option>
                                     <option>16</option>
@@ -189,7 +189,7 @@
 
                             <div class="right">Thumb
                                 <select name="right_thumb">
-                                    <option value="" disabled selected> -- </option>
+                                    <option value="" disabled selected>  </option>
                                     <option>14</option>
                                     <option>15</option>
                                     <option>16</option>
@@ -198,7 +198,7 @@
                             </div>
                             <div class="right">Index
                                 <select name="right_index">
-                                    <option value="" disabled selected> -- </option>
+                                    <option value="" disabled selected>  </option>
                                     <option>14</option>
                                     <option>15</option>
                                     <option>16</option>
@@ -207,7 +207,7 @@
                             </div>
                             <div class="right">Middle
                                 <select name="right_middle">
-                                    <option value="" disabled selected> -- </option>
+                                    <option value="" disabled selected>  </option>
                                     <option>14</option>
                                     <option>15</option>
                                     <option>16</option>
@@ -216,7 +216,7 @@
                             </div>
                             <div class="right">Ring
                                 <select name="right_ring">
-                                    <option value="" disabled selected> -- </option>
+                                    <option value="" disabled selected> </option>
                                     <option>14</option>
                                     <option>15</option>
                                     <option>16</option>
@@ -225,7 +225,7 @@
                             </div>
                             <div class="right">Pinky
                                 <select name="right_pinky">
-                                    <option value="" disabled selected> -- </option>
+                                    <option value="" disabled selected>  </option>
                                     <option>14</option>
                                     <option>15</option>
                                     <option>16</option>
@@ -235,11 +235,21 @@
 
                         </div>
                     </div>
+                    
                     <div>
-                        <p id="error" style="visibility:hidden;"></p>
+                        <p class="presson-text-1">3. Length</p>
+                        <select style="margin-bottom: 15px; width: 200px;" name="length">
+                            <option value="" disabled selected>  </option>
+                            <option>small</option>
+                            <option>medium</option>
+                            <option>long</option>
+                            <option>extra long</option>
+                            <option>xxl</option>
+                        </select>
+
                     </div>
                     <div class="send">
-                        <p class="presson-text-1">3. (optional) upload inspiration image</p>
+                        <p class="presson-text-1">4. (optional) upload inspiration image</p>
                         <input  class="files" type="file" id="inspo-image"   accept="image/.jpg,.jpeg,.png,.webp">
                         <input type="hidden" id="image-url" name="inspiration_image">  
                         <label for ="inspo-image" class="btnCustom">Upload Image</label>
@@ -248,10 +258,12 @@
                          <span id="file-name">No file chosen</span>
                     </div>
                     <div>
-                        <p class="presson-text-1">4. (optional) add instructions if needed</p>
+                        <p class="presson-text-1">5. (optional) add instructions if needed</p>
                         <textarea class="notes" name="notes" rows="4" ></textarea> 
                     </div>
-
+                    <div>
+                        <p id="error" style="visibility:hidden;"></p>
+                    </div>
                     <div>
                         <button type="button" class="btnCustom" onclick="Checkas(event)">Send Selection</button>
                     </div>
