@@ -1,3 +1,4 @@
+//functionality for phone
 const NavLinks = document.querySelectorAll(".nav-menu .nav-link");
 const menuOpenButton = document.querySelector("#menu-open-button");
 const menuCloseButton = document.querySelector("#menu-close-button");
@@ -11,13 +12,14 @@ menuCloseButton.addEventListener("click", () => menuOpenButton.click());
 NavLinks.forEach(link => {
     link.addEventListener("click", () => menuOpenButton.click());
 });
+//file name printer
 document.getElementById('inspo-image').addEventListener('change', function() {
     const fileName = this.files[0] ? this.files[0].name : 'No file chosen';
     document.getElementById('file-name').textContent = fileName;
 });
-
-const CLOUD_NAME = "dwgk36hfs";       // 👈 replace
-const UPLOAD_PRESET = "responsas"; // 👈 replace
+//for gmail bot for images and messages
+const CLOUD_NAME = "dwgk36hfs";      
+const UPLOAD_PRESET = "responsas"; 
 
 async function Checkas(e) {
     e.preventDefault();
@@ -73,12 +75,13 @@ async function Checkas(e) {
             });
             const data = await res.json();
               
-            console.log(data); // 👈 add this
+    
+            
             // put the image URL into the hidden field
             document.getElementById('image-url').value = data.secure_url;
         } catch (err) {
               
-            console.log(err); // 👈 add this
+         
             msg.style.color = 'red';
             msg.innerHTML = 'Image upload failed, try again.';
             return;
