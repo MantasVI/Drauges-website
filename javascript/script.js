@@ -16,8 +16,8 @@ document.getElementById('inspo-image').addEventListener('change', function() {
     document.getElementById('file-name').textContent = fileName;
 });
 
-const CLOUD_NAME = "dwgk36hfs";       // 👈 replace
-const UPLOAD_PRESET = "responsas"; // 👈 replace
+const CLOUD_NAME = "do5fdm2zo";       // 👈 replace
+const UPLOAD_PRESET = "ImageBotas"; // 👈 replace
 
 async function Checkas(e) {
     e.preventDefault();

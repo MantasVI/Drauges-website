@@ -375,7 +375,7 @@ header .navbar {
 .notes{
   width:400px; height: 150px; outline:none; resize:none;
   background-color: var(--cute-color);
- 
+  font-size: 20px;
   box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2);
   border: none;
   border-radius: 5px;
