@@ -29,7 +29,7 @@ async function Checkas(e) {
     const msg = document.getElementById('error');
     const insta = document.getElementById('insta-input').value;
     const fingers = ['Thumb', 'Index', 'Middle', 'Ring', 'Pinky'];
-
+    const z = document.getElementsByClassName('nailsize');
     msg.style.visibility = 'hidden';
     msg.innerHTML = '';
 
@@ -54,6 +54,14 @@ async function Checkas(e) {
             msg.style.visibility = 'visible';
             msg.style.color = 'red';
             msg.innerHTML = 'Not all fields filled';
+            return;
+        }
+    }
+     for (let i = 1; i < z.length; i++) {
+        if (z[i].getElementsByTagName('select')[0].value === "") {
+            msg.style.visibility = 'visible';
+            msg.style.color = 'red';
+            msg.innerHTML = 'Nail length not selected ';
             return;
         }
     }

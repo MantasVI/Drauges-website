@@ -22,6 +22,9 @@
   font-size: 20px;
   
 }
+.right{
+  margin-top: 10px;
+}
 
 .oneline {
   display: flex;
@@ -362,7 +365,9 @@ header .navbar {
   
   margin-bottom: 60px;
 }
-
+.nailsize{
+  margin-bottom: 15px; width: 200px;
+}
 .presson-text-1 {
   display: flex;
   justify-content: center;
@@ -391,7 +396,7 @@ header .navbar {
   
 }
 .insta{
-  width:400px; height:50px; outline:none;
+  width:70%; height:50px; outline:none;
   font-size: 20px;
     box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2);
     border-style: none;
@@ -633,5 +638,21 @@ header .navbar {
     font-size: 20px;
     height: 55px;
     width: 80px;
+  }
+    .notes {
+    width: 100%;
+  }
+
+  .insta {
+    width: 100%;
+  }
+
+  .presson-text {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+  body, html {
+    overflow-x: hidden;
+    width: 100%;
   }
 }
